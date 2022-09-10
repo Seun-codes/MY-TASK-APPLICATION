@@ -1,15 +1,17 @@
 package com.elizabeth.mytodoapp.DTO;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.validation.constraints.NotEmpty;
 
-@Data
+@Data @AllArgsConstructor @NoArgsConstructor
 public class UserDto {
     @NotEmpty
-    private String firstName;
-    @NotEmpty
-    private String lastName;
+    private String name;
+
     @NotEmpty
     private String email;
     @NotEmpty
